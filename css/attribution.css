@@ -1,0 +1,17 @@
+footer {
+  color: var(--Tomato);
+  text-align: center;
+}
+footer > div > a {
+    color: var(--Tomato);
+}
+
+@media only screen and (min-width: 450px) {
+    footer {
+        color: var(--White);
+        text-align: center;
+      }
+      footer > div > a {
+          color: var(--White);
+      }
+}

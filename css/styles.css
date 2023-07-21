@@ -1,0 +1,155 @@
+@import url("./attribution.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+  --Tomato: hsl(4, 100%, 67%);
+  --Error: hsla(4, 100%, 67%, 0.251);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-content: center;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  color: var(--Charcoal-Grey);
+  font-weight: bold;
+}
+
+.container-form {
+  padding: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+form {
+  margin-top: 0.5em;
+}
+
+input {
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  height: 7vh;
+  width: 100%;
+  border: 1px solid var(--Grey);
+  border-radius: 0.5em;
+  padding: 20px;
+}
+
+input:focus {
+  border: 2px solid var(--Grey);
+  outline: none;
+}
+
+.input-error {
+  background-color: var(--Error);
+  border: 1px solid var(--Tomato);
+}
+
+.input-error:focus {
+  border: 2px solid var(--Tomato);
+  outline: none;
+}
+
+button:hover {
+  background-color: var(--Tomato);
+}
+
+button {
+  height: 7vh;
+  width: 100%;
+  background-color: var(--Dark-Slate-Grey);
+  color: var(--White);
+  cursor: pointer;
+  transition: all 0.4s;
+  border: transparent;
+  border-radius: 0.5em;
+}
+
+fieldset {
+  border: transparent;
+}
+
+legend > label {
+  font-size: 12px;
+  color: var(--Charcoal-Grey);
+  font-weight: 700;
+}
+
+.list,
+.join {
+  font-size: 14px;
+  color: var(--Dark-Slate-Grey);
+  font-weight: 600;
+}
+
+.list > div {
+  display: flex;
+  gap: 0.8em;
+  margin-bottom: 10px;
+}
+
+.list div span img {
+  width: 16px;
+  height: 16px;
+}
+
+.errors {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-error {
+  color: var(--Tomato);
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 450px) {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  .container-form {
+    margin-top: 0;
+  }
+  form {
+    margin-top: 0;
+  }
+  .row {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--White);
+    padding: 1em;
+    border-radius: 20px;
+  }
+  #signup {
+    height: 55vh;
+  }
+  body {
+    background-color: var(--Dark-Slate-Grey);
+    justify-content: space-around;
+  }
+}
